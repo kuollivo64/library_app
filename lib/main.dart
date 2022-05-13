@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Biblioteca Univalle',
-      initialRoute: 'home',
+      initialRoute: 'login',
       routes: {
-        // 'login': (_) => LoginScreen(),
+        'login': (_) => LoginScreen(),
         'home': (_) => HomeScreen(),
         'details': (_) => DetailsScreen(),
       },

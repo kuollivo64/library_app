@@ -18,7 +18,7 @@ class CardSwiper extends StatelessWidget {
           color: Colors.white,
           child: GestureDetector(
             onTap: () => Navigator.pushNamed(context, 'details',
-                arguments: 'movie-instance'),
+                arguments: 'book-instance'),
             child: Swiper(
               itemCount: 10,
               layout: SwiperLayout.STACK,
