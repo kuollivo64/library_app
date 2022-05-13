@@ -12,7 +12,7 @@ class BookSlider extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
-              'Libros Populares',
+              'Libros Popularess',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
