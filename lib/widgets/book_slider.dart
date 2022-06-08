@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class BookSlider extends StatelessWidget {
+  final String nameCollection;
+
+  const BookSlider({Key? key, required this.nameCollection}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -9,11 +13,11 @@ class BookSlider extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
-              'Libros Popularess',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              nameCollection,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
           Expanded(

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:library_app/data/student.dart';
 
 class LoginScreen extends StatelessWidget {
+  String user = "";
+  String contra = "";
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -64,17 +67,24 @@ class LoginScreen extends StatelessWidget {
                 Container(
                   width: 250,
                   child: TextField(
+                    onChanged: (value) {
+                      user = value;
+                    },
                     decoration: InputDecoration(
-                        labelText: 'ID Estudiante',
-                        suffixIcon: Icon(
-                          Icons.person,
-                          size: 17,
-                        )),
+                      labelText: 'ID Estudiante',
+                      suffixIcon: Icon(
+                        Icons.person,
+                        size: 17,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
                   width: 250,
                   child: TextField(
+                    onChanged: (value) {
+                      contra = value;
+                    },
                     obscureText: true,
                     decoration: InputDecoration(
                         labelText: 'Password',
@@ -95,18 +105,24 @@ class LoginScreen extends StatelessWidget {
                         )
                       ],
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, 'home',
-                      arguments: 'book-instance'),
+                  onTap: () {
+                    // for (var i = 0; i < student.length; i++) {
+                    //   // print(student[i]);
+                    //   // print(student[i]);
+                    // }
+                    Navigator.pushNamed(context, 'home',
+                        arguments: 'book-instance');
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     width: 250,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                             begin: Alignment.centerLeft,
                             end: Alignment.centerRight,
                             colors: [
@@ -114,7 +130,7 @@ class LoginScreen extends StatelessWidget {
                               Color(0xFFE94057),
                               Color(0xFFF27121),
                             ])),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.all(12.0),
                       child: Text(
                         'Iniciar Sesión',

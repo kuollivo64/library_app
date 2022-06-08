@@ -5,6 +5,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: Drawer(
+          child: DrawerMenu(),
+        ),
         appBar: AppBar(
           title: const Text('Biblioteca Univalle'),
           elevation: 0,
@@ -19,11 +22,17 @@ class HomeScreen extends StatelessWidget {
               //card
               CardSwiper(),
               //listado
-              BookSlider(),
+              const BookSlider(
+                nameCollection: 'Contabilidad',
+              ),
               //listado
-              BookSlider(),
+              const BookSlider(
+                nameCollection: 'Medicina',
+              ),
               //listado
-              BookSlider(),
+              const BookSlider(
+                nameCollection: 'Informatica',
+              ),
             ],
           ),
         ));
